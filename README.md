@@ -83,7 +83,7 @@ Files:
 `02_contigs_assembly_megahit.sh`  
 `02.1_N50_boxplots.py`  
 
-Performs metagenomic assembly and computes summary metrics such as N50. The Python script generates corresponding visual outputs.
+Performs metagenomic assembly and computes summary metrics such as N50. The Python script generates corresponding visual outputs for QC.
 
 ---
 
@@ -91,7 +91,7 @@ Performs metagenomic assembly and computes summary metrics such as N50. The Pyth
 File:  
 `03_geNOMAD.sh`  
 
-Executes annotation and classification steps. Users should verify environment modules and adjust paths as required.
+Executes annotation and classification steps in geNomad. Users should verify environment modules and adjust paths as required.
 
 ---
 
@@ -99,7 +99,7 @@ Executes annotation and classification steps. Users should verify environment mo
 File:  
 `04_CheckV.sh`  
 
-Runs viral quality assessment workflows on contigs or bins.
+Runs viral quality assessment workflows on geNomad output.
 
 ---
 
@@ -122,7 +122,7 @@ Parses HMM search results and formats outputs for subsequent analyses.
 
 ### 7. IMG/VR UVIG Phage Lookup Integration  
 File:  
-`07_imgvr_uvig_phage_lookup_table...`  
+`07_imgvr_uvig_phage_lookup_tablemaker.R`  
 
 Generates lookup tables linking IMG/VR UVIG records to phage-associated metadata.
 
@@ -143,6 +143,7 @@ Files:
 `09_IMGVR_boxplots_v6.R`  
 
 Produces final figure panels for the manuscript, including boxplots and summary statistical representations.
+Note: The REBUILD file version allows for tweaking the diagrams without having to execute the computationally intensive steps that are prerequisite to figure construction.
 
 ---
 
@@ -155,8 +156,6 @@ Users should verify compatibility with their own environment, adjusting:
 • Software versions  
 • Module or conda environment settings  
 • Cluster-specific SLURM configurations  
-
-No assumptions are made about the user’s computational setup.
 
 ---
 
